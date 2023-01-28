@@ -1,0 +1,1250 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* start global rouls css */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  text-transform: none !important;
+}
+button {
+  border: none !important;
+  background-color: inherit !important;
+}
+ul {
+  padding-left: 0 !important;
+}
+li {
+  list-style: none !important;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden !important;
+}
+/* nav section  */
+nav {
+  padding: 24px 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #a8a8a8;
+}
+.linksContainer {
+  width: 60%;
+}
+.linksContainer ul {
+  margin-bottom: 0 !important;
+}
+.linksContainer ul li {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3d3d3d;
+  transition: 0.3s;
+}
+.linksContainer ul li.active {
+  font-weight: 700;
+}
+.linksContainer ul li:hover {
+  color: #3d3d3dba;
+}
+.logoContainer {
+  width: 40%;
+}
+.buttonNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  width: 105px;
+  background: #70735d;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.buttonNav:hover {
+  transform: scale(0.9);
+}
+.buttonNav button {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+/* landingPage */
+.landingPage {
+  position: relative;
+  background-image: url(../imgae/Background.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  /* overflow: hidden; */
+  padding: 115px 0;
+  background-size: cover;
+}
+.landingPage .headerBox {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-radius: 5px;
+}
+.landingPage .headerBox .linksHeader {
+  border: 0.5px solid #d9d9d9;
+}
+.landingPage .headerBox .linksHeader span {
+  cursor: pointer;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #3d3d3d;
+}
+.searchBox {
+  background: #ffffff;
+  padding: 16px;
+  gap: 20px;
+}
+.sortByBox {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+}
+.dropdownSortBy {
+  background: #ffffff;
+  padding: 30px 14px;
+  width: 234px;
+  top: 63px;
+  left: 16px;
+  display: none;
+}
+.dropdownSortBy.active {
+  display: flex;
+}
+.boxFilter_search {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 9px 10px;
+  height: 70px;
+  width: 47%;
+}
+.boxFilter_search i {
+  font-size: 21px;
+}
+.contentbox span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.contentbox span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #d9d9d9;
+}
+.contentbox input {
+  padding: 5px 0px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+}
+.contentbox input:focus {
+  outline: none;
+}
+.dropdownSortBy span {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+/* .searchPlaceHolder {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b7b7b7;
+  cursor: pointer;
+} */
+
+.buttonDuration {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #d9d9d9;
+}
+.textSearch span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.textSearch span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  /* Slider */
+
+  color: #d9d9d9;
+}
+.buttonSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 5px;
+  width: 136px;
+  height: 43px;
+  background: #ffffff;
+  border: 0.5px solid #70735d;
+  border-radius: 5px;
+  transition: ease-in 0.4s;
+}
+.buttonSearch:hover {
+  transform: scale(0.9);
+}
+.buttonSearch button {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.buttonSearch i {
+  font-size: 12px;
+  color: #3d3d3d;
+}
+/* section Tour */
+.container-sm.tourSection {
+  padding-top: 240px;
+}
+.headerSections {
+}
+.headerSections .header {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.headerSections .desc {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.sectiontour {
+  position: relative;
+}
+.cardContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  margin: 0 5px;
+}
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  font-size: 20px;
+  color: #777;
+  transition: ease-in 0.4s;
+  cursor: pointer;
+  display: none;
+}
+
+.leftArrow:hover {
+  transform: scale(0.8);
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  font-size: 20px;
+  color: #777;
+  transition: ease-in 0.4s;
+  cursor: pointer;
+  display: none;
+}
+.cardTour {
+  min-width: 223px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 2s;
+}
+.imgaeCard {
+  /* width: 28%; */
+}
+.imgaeCard::before {
+  content: "package";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 43px;
+  background: #f2b705;
+  border: 0.376364px solid #70735d;
+  border-radius: 10px 0px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgaeCard img {
+  max-width: 100%;
+  width: 164px;
+  height: 123px;
+}
+.contentCard {
+  background: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  height: 123px;
+}
+.contentCard .title {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.contentCard .cardDesc {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.contentCard .price span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.contentCard .price span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #70735d;
+}
+/* our tour Section  */
+.cardOurtour {
+  min-width: 223px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 2s;
+}
+.ToutImage {
+  width: 100%;
+  position: relative;
+}
+.ToutImage img {
+  max-width: 100%;
+  width: 320px;
+  height: 100px;
+}
+.typetour {
+  position: absolute;
+  width: 74px;
+  height: 27px;
+  right: 0px;
+  top: 0px;
+  background: #f2b705;
+  border-radius: 5px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reate {
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.reate i {
+  color: #f2b705;
+}
+.contentOurTour {
+  width: 100%;
+  padding: 20px 10px;
+  background: #ffffff;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-radius: 0px 0px 10px 10px;
+}
+.contentOurTour .title {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.contentOurTour .duration {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  color: #3d3d3d;
+}
+.contentOurTour .days {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+
+.cardBottom .price span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.cardBottom .price span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #70735d;
+}
+.cardBottom .buttonViewTour {
+  background: #ffffff;
+  border: 0.5px solid #70735d;
+  border-radius: 5px;
+  width: 91px;
+  height: 44px;
+}
+.cardBottom .buttonViewTour button {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.cardBottom .buttonViewTour i {
+  font-size: 12px;
+  color: #3d3d3d;
+}
+.btnViewAll {
+  display: none;
+}
+
+/* hotles section */
+.cardHotel {
+  border: 1.32258px solid #d9d9d9;
+  border-radius: 10.5806px;
+  min-width: 186px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 2s;
+}
+.hotelImage {
+  width: 100%;
+  position: relative;
+}
+.hotelImage img {
+  max-width: 100%;
+  width: 185px;
+  height: 146px;
+}
+.hotelImage .offer {
+  position: absolute;
+  width: 52px;
+  height: 43px;
+  left: 0px;
+  top: 0px;
+  background: #034c8c;
+  border: 0.396774px solid #70735d;
+  border-radius: 0px 10.5806px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotelImage .reateHotel {
+  position: absolute;
+  top: 8px;
+  right: 3px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.hotelImage .reateHotel i {
+  font-size: 16px;
+  color: #f2b705;
+}
+.hotelImage .hotleDesc {
+  position: absolute;
+  bottom: 13px;
+  left: 6px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+/* to do section */
+.cardContainer .cardToDo:nth-of-type(2) {
+  min-width: 135px;
+}
+.cardContainer .cardToDo:nth-of-type(3) {
+  min-width: 135px;
+}
+.cardToDo {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 180px;
+  cursor: pointer;
+}
+.cardToDo .todoimage {
+  position: relative;
+  width: 100%;
+}
+.cardToDo .todoimage img {
+  max-width: 100%;
+  width: 178px;
+  height: 225px;
+}
+.cardToDo .todoimage::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000066;
+}
+.cardToDo .todoimage .imgCardText {
+  position: absolute;
+  left: 6px;
+  bottom: 11px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  z-index: 1;
+}
+.lauoutToBo {
+  display: none;
+}
+.expCard {
+  min-width: 194px;
+  cursor: pointer;
+}
+.expCard .expImage {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+
+  width: 100%;
+}
+.expCard .expImage img {
+  max-width: 100%;
+  width: 200px;
+  height: 182px;
+}
+.expCard .expContent {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+/* Tran section  */
+.transCardContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  margin: 0 5px;
+}
+.transCardContainer::-webkit-scrollbar {
+  display: none;
+}
+.TranCard {
+  min-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.TranCard .TranImgae img {
+  max-width: 300px;
+  width: 126px;
+  height: 145px;
+}
+.TranCard .TranContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  gap: 10px;
+  width: 166px;
+  height: 145px;
+  background: #034c8c;
+  border-radius: 0px 5px 5px 0px;
+}
+.TranCard .TranContent .content:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.TranCard .TranContent .content:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+/* links footer */
+.linksFooter {
+  width: 45%;
+}
+.linksFooter .linksheader {
+}
+.linksFooter .linksheader .header {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  position: relative;
+  color: #000000;
+  padding-bottom: 10px;
+}
+.linksFooter .linksheader .header::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #70735d;
+}
+.linksFooter .links {
+}
+.linksFooter .links li {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #034c8c;
+  transition: all;
+}
+.linksFooter .links li:hover {
+  color: #034c8cc7;
+}
+/* footer */
+.Footer {
+  background: #034c8c;
+  padding: 30px;
+}
+.Footer .logoFooter {
+  display: flex;
+}
+.Footer .logoFooter img {
+  max-width: 100%;
+  width: 106px;
+  height: 26px;
+}
+.Footer .descFooter {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF
+}
+.Footer .followLinks span  {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+.Footer .usefulUs .title  {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  margin:  15px 0 ;
+}
+.Footer .usefulUs .links li  {
+  font-family: 'Karla';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+color: #FFFFFF;
+transition: all;
+}
+.Footer .usefulUs .links li:hover  {
+color: #e9c016c4;
+}
+.Footer .contactUs .contactHeader  {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+.Footer .contactUs i   {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.Footer .contactUs  span  {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+/* responsev desktop */
+/* responsev nav */
+
+@media only screen and (max-width: 786px) {
+  .linksContainer {
+    width: 60%;
+    display: none;
+  }
+  .logoContainer {
+    width: 52%;
+  }
+  .iconMenu {
+    cursor: pointer;
+  }
+  .menuBar {
+    position: relative;
+    overflow: hidden;
+  }
+  .menu-box {
+    position: absolute;
+    top: -18px;
+    left: 99px;
+    width: 141px;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px !important;
+    gap: 24px;
+    transition: ease-in-out 0.5s;
+  }
+  .menu-box.active {
+    left: -69px;
+    z-index: 5;
+  }
+  .menu-box li {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    color: #3d3d3d;
+    transition: 0.3s;
+  }
+  .menu-box li:hover {
+    color: #3d3d3da8;
+  }
+  .buttonNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 14px;
+    width: 105px;
+    background: #70735d;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .iconClose {
+    cursor: pointer;
+    padding-top: 5px;
+  }
+  .layout {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: #0000006b;
+  }
+  .layout.show {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 786px) {
+  .landingPage .headerBox .linksHeader span {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration-line: none;
+    color: #3d3d3d;
+  }
+  .landingPage .headerBox .linksHeader {
+    gap: 60px !important;
+  }
+  .landingPage {
+    position: relative;
+    background-image: url(../imgae/Background.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 506px;
+  }
+  .landingPage .headerBox {
+    top: 50%;
+  }
+  .sortByBox {
+    width: 20%;
+  }
+  .boxFilter_search {
+    width: 20% !important;
+  }
+  .dateAndDuration {
+    width: 50%;
+  }
+  .dayBox {
+    width: 47% !important;
+  }
+  .landingPage .headerBox {
+    width: 998px;
+  }
+  .contentbox span:nth-of-type(1) {
+    font-size: 18px;
+  }
+  .textSearch span:nth-of-type(1) {
+    font-size: 18px;
+  }
+  .textSearch span:nth-of-type(2) {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .buttonDuration {
+    font-size: 16px;
+  }
+  .buttonSearch {
+    width: 233px;
+  }
+  .buttonSearch button {
+    font-size: 19px;
+  }
+  .buttonSearch i {
+    font-size: 15px;
+    color: #3d3d3d;
+  }
+  .container-sm.tourSection {
+    padding-top: 28px;
+  }
+  .headerSections .header {
+    font-size: 21px;
+  }
+  .headerSections .desc {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .contentCard .title {
+    font-size: 18px;
+  }
+  .contentCard .cardDesc {
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .contentCard {
+    height: 142px;
+  }
+  .imgaeCard img {
+    height: 142px;
+  }
+  .contentCard .price span:nth-of-type(1) {
+    font-size: 18px;
+  }
+  .contentCard .price span:nth-of-type(2) {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .imgaeCard {
+    transition: all 3.2s ease-in-out;
+  }
+  .cardTour:hover .imgaeCard {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+
+    width: 100%;
+  }
+  .cardOurtour {
+    min-width: 334px;
+  }
+  .ToutImage img {
+    width: 333px;
+    height: 145px;
+  }
+  .contentOurTour .title {
+    font-size: 18px;
+  }
+  .contentOurTour .duration {
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .contentOurTour .days {
+    font-size: 16px;
+  }
+  .cardBottom .price span:nth-of-type(1) {
+    font-size: 17px;
+  }
+  .cardBottom .price span:nth-of-type(2) {
+    font-size: 23px;
+  }
+  .cardBottom .buttonViewTour {
+    width: 110px;
+  }
+  .cardBottom .buttonViewTour button {
+    font-size: 15px;
+  }
+  .cardBottom .buttonViewTour i {
+    font-size: 16px;
+  }
+  .btnViewAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 14px;
+    position: absolute;
+    width: 152px;
+    height: 43px;
+    background: #70735d;
+    border-radius: 8px;
+    margin-left: auto;
+  }
+  .btnViewAll button {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .cardHotel {
+    min-width: 261px;
+  }
+  .hotelImage img {
+    max-width: 100%;
+    width: 270.16px;
+    height: 164.11px;
+  }
+  .hotelImage .hotleDesc {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .leftArrow {
+    display: block;
+  }
+
+  .leftArrow:hover {
+    transform: scale(0.8);
+  }
+
+  .rightArrow {
+    display: block;
+  }
+  .cardToDo {
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 510px;
+    cursor: pointer;
+  }
+  .cardToDo .todoimage .imgCardText {
+    font-size: 18px;
+    line-height: 21px;
+    transition-property: font-size;
+    transition: ease-in 0.5s;
+  }
+  .cardToDo .todoimage img {
+    max-width: 100%;
+    width: 530px;
+    height: 429px;
+    transition: ease-in-out 0.7s;
+  }
+  .cardContainer .cardToDo:nth-of-type(1) .todoimage:hover img {
+    transform: scale(1.2);
+  }
+  .cardContainer .cardToDo .todoimage:hover .imgCardText {
+    font-size: 27px;
+    left: 50px;
+    bottom: 50%;
+  }
+  .lauoutToBo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #00000042;
+    display: block;
+  }
+  .cardContainer .cardToDo .todoimage:hover .lauoutToBo {
+    -webkit-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+    height: 100%;
+  }
+  .cardContainer .cardToDo:nth-of-type(2) {
+    min-width: 244.5px;
+  }
+  .cardToDo .todoimage::before {
+    display: none;
+  }
+  .expCard {
+    min-width: 47%;
+    cursor: pointer;
+  }
+  .expCard .expImage img {
+    max-width: 100%;
+    width: 530px;
+    height: 350px;
+  }
+  .expCard .expContent {
+    font-size: 21px;
+    margin: 12px 0;
+  }
+  .transCardContainer {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+  .TranCard {
+    min-width: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .TranCard .TranImgae img {
+    max-width: 100%;
+    width: 643px;
+    height: 401px;
+  }
+  .TranCard .TranContent {
+    padding: 14px;
+    width: 417px;
+    height: 401px;
+  }
+  .TranCard .TranContent .content:nth-of-type(1) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .TranCard .TranContent .content:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 13px 0;
+  }
+  .linksFooter {
+    width: 31%;
+  }
+  .linksFooter .linksheader .header {
+    font-size: 22px;
+  }
+  .linksFooter .links li {
+    font-size: 21px;
+    line-height: 27px;
+  }
+  .footerContainer {
+    gap: 41px !important;
+}
+  .followUs{
+    width: 50%;
+  }
+  .usefulUs{
+    width: 165px;
+  }
+  .contactUs {
+    width: 281px;
+  }
+  .Footer .logoFooter img {
+    max-width: 100%;
+    width: 482.77px;
+    height: 104px;
+}
+.Footer .descFooter {
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+}
+.Footer .followLinks span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.Footer .usefulUs .title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.Footer .usefulUs .links li {
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+}
+.Footer .contactUs .contactHeader {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.Footer .contactUs span {
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+}
+}
