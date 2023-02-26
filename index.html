@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+  />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,900;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/singileTour.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
 
@@ -40,10 +42,10 @@
               <a href="/"> Home</a>
             </li>
             <li>
-              <a href="/"> About us</a>
+              <a href="aboutUs.html"> About us</a>
             </li>
             <li>
-              <a href="/"> Tours</a>
+              <a href="toursList.html"> Tours</a>
             </li>
             <li>
               <a href="/"> Support</a>
@@ -75,10 +77,10 @@
               <a href="/"> Home</a>
             </li>
             <li>
-              <a href="/"> About us</a>
+              <a href="aboutUs.html"> About us</a>
             </li>
             <li>
-              <a href="/"> Tours</a>
+              <a href="toursList.html"> Tours</a>
             </li>
             <li>
               <a href="/"> Support</a>
@@ -117,15 +119,18 @@
           >
             <!-- sort by -->
             <div
-              class="sortByBox d-flex align-items-center justify-content-between"
+              class="sortByBox d-flex align-items-center "
             >
-              <div class="textSearch d-flex flex-column">
+              <div class="textSearch d-flex flex-column gap-2 w-100">
                 <span> Sort by </span>
-                <span> Price (Highest) </span>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                  <option selected>Price (Highest)</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
               </div>
-              <div class="iconSearch">
-                <img src="imgae/Sort by.svg" alt="" />
-              </div>
+              
               <div
                 class="dropdownSortBy flex-column gap-2 justify-content-center position-absolute"
               >
@@ -144,12 +149,7 @@
                 <i class="fa fa-calendar"></i>
                 <div class="contentbox d-flex gap-1 flex-column">
                   <span>Departing Between</span>
-                  <input
-                    type="text"
-                    placeholder="Feb 3 - Feb 12"
-                    onfocus="(this.type='date')"
-                    onblur="(this.type='text')"
-                  />
+                  <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
                 </div>
               </div>
               <!-- duration -->
@@ -161,7 +161,7 @@
                   <span>Duration</span>
                   <div class="searchPlaceHolder">
                     <input
-                      type="text"
+                      type="number"
                       class="form-control"
                       placeholder="3 - 8 nights"
                       aria-label="First name"
@@ -171,7 +171,7 @@
               </div>
             </div>
             <!-- teavlesesd -->
-            <div class="boxFilter_search d-flex gap-2 align-items-center w-100">
+            <div class="boxFilter_search flex-column d-flex gap-2 align-items-center w-100">
               <div
                 class="d-flex gap-2 align-items-center justify-content-center"
               >
@@ -179,60 +179,65 @@
                 <div class="contentbox d-flex gap-1 flex-column">
                   <span>teavlesesd</span>
                   <div class="searchPlaceHolder">
-                    <button class="p-2 buttonDuration">
+                    <button class="p-2 buttonDuration" id="counterDate"> 
+                     
                       2 adults, 1 children
+                    
                     </button>
                   </div>
                 </div>
+                <div class="counderFilter">
+                 
+                </div>
               </div>
 
-              <div class="counderFilter">
-                <!-- counter box  -->
-                <div class="counterbox d-none">
+              <!-- counter box  -->
+              <div class="counterboxHome ">
+                <div
+                  class="counter d-flex flex-column gap-3 align-items-center"
+                >
                   <div
-                    class="counter d-flex flex-column gap-3 align-items-center"
+                    class="d-flex justify-content-between align-items-center w-100"
                   >
+                    <span class="textCounter"> Adults </span>
                     <div
-                      class="d-flex justify-content-between align-items-center w-100"
+                      class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
                     >
-                      <span class="textCounter"> Adults </span>
-                      <div
-                        class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
-                      >
-                        <img src="image/Minus.svg" id="mins" alt="" />
-                        <span class="number"> 0 </span>
-                        <img src="image/Plus.svg" id="plus" alt="" />
-                      </div>
+                      <img onclick="removeCounter('adults')" src="imgae/Minus.svg" id="mins" alt="" />
+                      <!-- <span class="number"> 0 </span> -->
+                      <input id="adults" type="text" name="adults" class="form-control input-number book_all" value="0" min="1" max="100" readonly="">
+                      <img onclick="addCounter('adults')" src="imgae/Plus.svg" id="plus" alt="" />
                     </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100"
+                  >
+                    <span class="textCounter"> Children </span>
                     <div
-                      class="d-flex justify-content-between align-items-center w-100"
+                      class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
                     >
-                      <span class="textCounter"> Children </span>
-                      <div
-                        class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
-                      >
-                        <img src="image/Minus.svg" id="mins" alt="" />
-                        <span class="number"> 0 </span>
-                        <img src="image/Plus.svg" id="plus" alt="" />
-                      </div>
+                      <img onclick="removeCounter('Children')" src="imgae/Minus.svg" id="mins" alt="" />
+                      <input id="Children" type="text" name="Children" class="form-control input-number book_all" value="0" min="1" max="100" readonly="">
+                      <img onclick="addCounter('Children')"  src="imgae/Plus.svg" id="plus" alt="" />
                     </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-100"
+                  >
+                    <span class="textCounter"> Infants </span>
                     <div
-                      class="d-flex justify-content-between align-items-center w-100"
+                      class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
                     >
-                      <span class="textCounter"> Infants </span>
-                      <div
-                        class="counterContainer d-flex justify-content-between align-items-center gap-2 p-2 border rounded-3"
-                      >
-                        <img src="image/Minus.svg" id="mins" alt="" />
-                        <span class="number"> 0 </span>
-                        <img src="image/Plus.svg" id="plus" alt="" />
-                      </div>
+                      <img onclick="removeCounter('Infants')" src="imgae/Minus.svg" id="mins" alt="" />
+                      <input id="Infants" type="text" name="Infants" class="form-control input-number book_all" value="0" min="1" max="100" readonly="">
+                      <img onclick="addCounter('Infants')"  src="imgae/Plus.svg" id="plus" alt="" />
                     </div>
-                    <div
-                      class="buttoncounter d-flex justify-content-center align-items-center p-2 w-100"
-                    >
-                      <button>Done</button>
-                    </div>
+                  </div>
+                  <div 
+                  id="counterButton"
+                    class="buttoncounter d-flex justify-content-center align-items-center p-2 w-100"
+                  >
+                    <button>Done</button>
                   </div>
                 </div>
               </div>
@@ -350,6 +355,7 @@
         </div>
         <div class="cardContainer" id="cardContainer">
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -378,7 +384,9 @@
               </div>
             </div>
           </div>
+         </a>
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -407,7 +415,9 @@
               </div>
             </div>
           </div>
+         </a>
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -436,7 +446,9 @@
               </div>
             </div>
           </div>
+         </a>
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -465,7 +477,9 @@
               </div>
             </div>
           </div>
+         </a>
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -494,7 +508,9 @@
               </div>
             </div>
           </div>
+         </a>
           <!-- card -->
+         <a href="singile.html">
           <div class="cardOurtour d-flex align-items-center flex-column">
             <!-- imge card  -->
             <div class="ToutImage">
@@ -523,12 +539,388 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- left arrow -->
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+          <!-- card -->
+         <a href="singile.html">
+          <div class="cardOurtour d-flex align-items-center flex-column">
+            <!-- imge card  -->
+            <div class="ToutImage">
+              <div class="typetour">NileCruise</div>
+
+              <img src="imgae/sharm.jpg" alt="" />
+              <div class="reate"><i class="fa fa-star"></i> 4.9</div>
+            </div>
+            <!-- content card  -->
+            <div class="contentOurTour d-flex gap-2 flex-column">
+              <div class="title">Sharm Al-Shaikh</div>
+              <div class="duration">Imperial Cities (08 Days / 07 Nights)</div>
+              <div class="days">8 Days | Private Tour</div>
+              <!-- poice and button -->
+              <div
+                class="cardBottom d-flex align-items-center gap-1 justify-content-md-between"
+              >
+                <div class="price d-flex flex-column gap-1">
+                  <span>From </span>
+                  <span>$7809 </span>
+                </div>
+                <div class="buttonViewTour d-flex align-items-center">
+                  <button>View Tour</button>
+                  <i class="fa fa-arrow-circle-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         </a>
+        
+          </div>
+          <!-- left arrow -->
         <div onclick="handleClick('right')" class="rightArrow">
           <i class="fa fa-arrow-alt-circle-right" aria-hidden="true"></i>
         </div>
       </div>
+        </div>
+        
       <div class="btnViewAll">
         <button>view all tour</button>
       </div>
@@ -867,6 +1259,14 @@
         </div>
       </div>
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="js/main.js"></script>
+    
   </body>
 </html>

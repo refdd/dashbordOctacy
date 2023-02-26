@@ -29,9 +29,9 @@ li {
   list-style: none !important;
 }
 body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-family: 'Karla', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Karla", sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden !important;
 }
 /* nav section  */
@@ -267,6 +267,7 @@ nav {
   padding-top: 240px;
 }
 .headerSections {
+  gap: 16px !important;
 }
 .headerSections .header {
   font-family: "Karla";
@@ -287,6 +288,91 @@ nav {
 }
 .sectiontour {
   position: relative;
+  z-index: -1;
+}
+input#adults,
+#Children,
+#Infants {
+  width: 36px;
+  background: transparent;
+  border: 0;
+}
+input#adults::placeholder {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #3d3d3d;
+}
+.counterboxHome {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.5s linear;
+  visibility: hidden;
+  z-index: 5;
+}
+.counterboxHome.active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.counterboxHome .counter {
+}
+.counterContainer img,
+.counterContainer span {
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.textCounter {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #3d3d3d;
+}
+.counterContainer span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #3d3d3d;
+}
+.counterContainer img:hover {
+  transform: scale(0.9);
+}
+.buttoncounter {
+  background: #70735d;
+  border-radius: 10px;
+}
+.buttoncounter:hover {
+  transform: scale(0.9);
+}
+.buttoncounter button {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.contextFormInauire {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #7a7a7a;
 }
 .cardContainer {
   display: flex;
@@ -783,65 +869,72 @@ nav {
   height: 26px;
 }
 .Footer .descFooter {
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  color: #FFFFFF
+  color: #ffffff;
 }
-.Footer .followLinks span  {
-  font-family: 'Karla';
+.Footer .followLinks span {
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.Footer .usefulUs .title  {
-  font-family: 'Karla';
+.Footer .usefulUs .title {
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  color: #FFFFFF;
-  margin:  15px 0 ;
+  color: #ffffff;
+  margin: 15px 0;
 }
-.Footer .usefulUs .links li  {
-  font-family: 'Karla';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
-color: #FFFFFF;
-transition: all;
-}
-.Footer .usefulUs .links li:hover  {
-color: #e9c016c4;
-}
-.Footer .contactUs .contactHeader  {
-  font-family: 'Karla';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-}
-.Footer .contactUs i   {
-  font-size: 16px;
-  color: #FFFFFF;
-}
-.Footer .contactUs  span  {
-  font-family: 'Karla';
+.Footer .usefulUs .links li {
+  font-family: "Karla";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
+  transition: all;
+}
+.Footer .usefulUs .links li:hover {
+  color: #e9c016c4;
+}
+.Footer .contactUs .contactHeader {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.Footer .contactUs i {
+  font-size: 16px;
+  color: #ffffff;
+}
+.Footer .contactUs span {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+.form-select-sm {
+  border: 0;
+}
+.form-select {
+  background-image: url("../imgae/Sort\ by.svg") !important;
+  background-size: 21px 54px;
 }
 /* responsev desktop */
 /* responsev nav */
@@ -859,7 +952,6 @@ color: #e9c016c4;
   }
   .menuBar {
     position: relative;
-    overflow: hidden;
   }
   .menu-box {
     position: absolute;
@@ -868,14 +960,16 @@ color: #e9c016c4;
     width: 141px;
     background: #ffffff;
     border: 1px solid #d9d9d9;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px 20px !important;
     gap: 24px;
-    transition: ease-in-out 0.5s;
+    /* visibility: hidden; */
+    display: none;
+    transition: visibility ease-in-out 0.5s;
   }
   .menu-box.active {
+    display: flex;
     left: -69px;
     z-index: 5;
   }
@@ -1202,11 +1296,11 @@ color: #e9c016c4;
   }
   .footerContainer {
     gap: 41px !important;
-}
-  .followUs{
+  }
+  .followUs {
     width: 50%;
   }
-  .usefulUs{
+  .usefulUs {
     width: 165px;
   }
   .contactUs {
@@ -1216,35 +1310,49 @@ color: #e9c016c4;
     max-width: 100%;
     width: 482.77px;
     height: 104px;
-}
-.Footer .descFooter {
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-}
-.Footer .followLinks span {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-.Footer .usefulUs .title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-.Footer .usefulUs .links li {
-font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-}
-.Footer .contactUs .contactHeader {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-.Footer .contactUs span {
-font-weight: 500;
-font-size: 18px;
-line-height: 21px;
-}
+  }
+  .Footer .descFooter {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Footer .followLinks span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Footer .usefulUs .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Footer .usefulUs .links li {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .Footer .contactUs .contactHeader {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .Footer .contactUs span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .sectiontour {
+    position: relative;
+    z-index: 1;
+  }
+  .counterboxHome {
+    width: 300px;
+  }
+  input#adults,
+  #Children,
+  #Infants {
+    width: 54px;
+    background: transparent;
+    border: 0;
+  }
 }

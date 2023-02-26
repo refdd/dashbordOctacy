@@ -1,0 +1,41 @@
+.landingPage .typeList {
+    position: absolute;
+    bottom: 32px;
+    left: 27px;
+    
+}
+.landingPage .typeList span {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+     line-height: 28px;
+    color: #FFFFFF;
+    
+}
+.cardOurtour {
+    min-width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 2s;
+  }
+@media only screen and (min-width: 786px) {
+    .landingPage .typeList span {
+font-family: 'Karla';
+font-style: normal;
+font-weight: 800;
+font-size: 60px;
+line-height: 70px;
+color: #FFFFFF;
+    }
+    .landingPage .typeList {
+        position: absolute;
+        bottom: 71px;
+        left: 41px;
+    }
+   .col-6 .ToutImage img {
+        width: 440px;
+    }
+}

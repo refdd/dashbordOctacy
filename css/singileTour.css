@@ -1,0 +1,1049 @@
+.infoTour {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+}
+.infoTour ul li span {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  color: #ffffff;
+}
+.infoTour ul li:nth-of-type(3) i {
+  color: #ffe234;
+}
+.logoHeader {
+  position: absolute;
+  top: 30%;
+  left: 47px;
+}
+.logoHeader .logo {
+  padding-right: 10px;
+  border-radius: 3.94995px;
+  transition: ease-in-out 0.3s;
+}
+.logoHeader .logo i {
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+}
+.logoHeader .logo:hover i {
+  opacity: 1;
+}
+.logoHeader .logo:hover {
+  background: #fff;
+}
+.logoHeader span {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  display: block;
+  margin: 19px 0;
+  width: 121px;
+}
+.tapsSection {
+  padding: 14px 30px 14px 20px;
+  margin-top: 20px;
+  background: #ffffff;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #d9d9d9;
+}
+.tapsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  margin: 0 5px;
+}
+.tapsContainer::-webkit-scrollbar {
+  display: none;
+}
+.tapsContainer .singileTap {
+  min-width: 87px;
+  cursor: pointer;
+}
+.singileTap .tap {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #898989;
+  padding: 5px;
+}
+.singileTap .tap.active {
+  color: #034c8c;
+}
+.TopHotelsCard {
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 223px;
+  cursor: pointer;
+}
+.TopHotelsCard .hotleImage {
+  border: 1.32258px solid #d9d9d9;
+  border-radius: 5px 0px 0px 5px;
+  overflow: hidden;
+  position: relative;
+}
+.TopHotelsCard .hotleImage img {
+  max-width: 100%;
+  width: 120px;
+  height: 113px;
+}
+.TopHotelsCard .contentTopTour {
+  padding: 10px;
+  background: #ffffff;
+  width: 187px;
+  height: 113px;
+}
+.contentTopTour span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.contentTopTour span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.hotleImage .reate {
+  position: absolute;
+  top: 0;
+  right: 13px;
+  width: 50px;
+  height: 50px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.hotleImage .reate i {
+  color: #f2b705;
+}
+.hotleImage .layout_tophotel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006b;
+}
+.hotleImage .content {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+.reviewsSection {
+  padding: 12px;
+  background: #ffffff;
+  border: 0.252998px solid #f2b705;
+  border-radius: 10.1199px;
+}
+.reviews .reviewContent .title span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.reviews .reviewContent .title span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.reviews .reviewContent .commit {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+  margin: 10px 0;
+}
+.reviews .reviewContent .reateStar {
+  font-size: 16px;
+  color: #ffe234;
+}
+.reviews .avtarImg {
+  border: 0.943925px solid #70735d;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.reviews .avtarImg img {
+  max-width: 100%;
+  width: 49.59px;
+  height: 49.59px;
+  object-fit: cover;
+}
+.splide__list {
+  align-items: center !important;
+}
+.is-visible .reviewsSection {
+  /* display: none !important; */
+  padding: 30px 20px;
+}
+.splide__list {
+  gap: 15px !important;
+}
+.accordion-button {
+  background-color: #f5f5f5 !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #3d3d3d !important;
+}
+.headerInfo {
+  font-family: "Karla" !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  line-height: 14px !important;
+  letter-spacing: 0.03em !important;
+  color: #3d3d3d !important;
+}
+.layoutView {
+  display: none;
+}
+.layoutView.active {
+  display: block;
+}
+.aboutContent {
+  width: 100%;
+}
+.aboutSection .aboutContent span {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: justify;
+  color: #3d3d3d;
+}
+.aboutSection .viewMapBtn {
+  background: #ffffff;
+  border: 0.5px solid #70735d;
+  border-radius: 5px;
+  width: 91px;
+  height: 44px;
+  cursor: pointer;
+  transition: all;
+}
+.aboutSection .viewMapBtn:hover {
+  transform: scale(0.9);
+}
+.aboutSection .viewMapBtn button i {
+  font-size: 12px;
+  color: #3d3d3d;
+}
+.aboutSection .viewMapBtn button {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.video_container {
+  height: 135px;
+}
+.video_container video {
+  object-fit: cover;
+}
+.itineranyCard .headerItinerary {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+  position: relative;
+}
+.itineranyCard .headerItinerary::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -23px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #034c8c;
+}
+.itineranyCard .descItinerary {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: justify;
+  color: #3d3d3d;
+}
+.itineranyCard .buttonItinerary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 89px;
+  height: 44px;
+  background: #ffffff;
+  border: 0.5px solid #70735d;
+  border-radius: 5px;
+  transition: all;
+}
+.itineranyCard .buttonItinerary:hover {
+  transform: scale(0.9);
+}
+.itineranyCard .buttonItinerary button {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.itineranyCard .buttonItinerary button i {
+  font-size: 15px;
+  color: #3d3d3d;
+}
+.imageItinerary {
+}
+.imageItinerary img {
+  max-width: 100%;
+  width: 100%;
+  height: 165px;
+}
+.inquireSection {
+  background: #f5f5f5;
+}
+.headerInquery {
+  background: #70735d;
+  padding: 20px;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.code_selected {
+  width: 90px;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.inputCode {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.startDate,
+.endDate {
+  width: 48%;
+}
+.startDate,
+.endDate,
+.textArea {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.startDate input,
+.endDate input {
+  padding: 11px 0px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  width: 100%;
+}
+.startDate input::placeholder,
+.endDate input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #c0c0c0;
+  padding-left: 8px;
+}
+.startDate input:focus,
+.endDate input:focus {
+  outline: none;
+}
+.inputCounter {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+.inputCounter span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+.counterbox {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.5s linear;
+  visibility: hidden;
+}
+.counterbox.active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.counterbox .counter {
+  padding: 15px;
+}
+.counterContainer img,
+.counterContainer span {
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.textCounter {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #3d3d3d;
+}
+.counterContainer span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #3d3d3d;
+}
+.counterContainer img:hover {
+  transform: scale(0.9);
+}
+.buttoncounter {
+  background: #70735d;
+  border-radius: 10px;
+}
+.buttoncounter:hover {
+  transform: scale(0.9);
+}
+.buttoncounter button {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.contextFormInauire {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #7a7a7a;
+}
+.form-group textarea::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #c0c0c0;
+}
+.bottonInqueryFrom {
+  background: #70735d;
+  border-radius: 10px;
+}
+.bottonInqueryFrom:hover {
+  transform: scale(0.9);
+}
+.bottonInqueryFrom button {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.sortSection {
+  background: #ffffff;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 10px;
+  height: 77px;
+  transition: height 0.3s;
+}
+.sortSection.active {
+  height: auto;
+}
+.sortSection .sort {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.sortSection .sort .sortContent span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.sortSection .sort .sortContent span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #d9d9d9;
+}
+.sortBox {
+  margin-top: 1rem;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+.sortBox.active {
+  visibility: visible;
+}
+.boxFilter_search {
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 9px 10px;
+  height: 70px;
+  width: 100%;
+}
+.Travelers {
+  padding: 9px 10px;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.Travelers .content-search {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.searchPlaceHolder input {
+  padding: 5px 0px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  width: 100%;
+}
+.searchPlaceHolder input[type="text"] {
+  border: 0;
+}
+.searchPlaceHolder input:focus {
+  outline: none;
+}
+.searchPlaceHolder input::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #b7b7b7;
+  text-align: center;
+}
+.buttonSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  width: 130px;
+  background: #70735d;
+  border-radius: 5px;
+}
+.buttonSearch:hover {
+  transform: scale(0.9);
+}
+.buttonSearch button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+.tourSearch {
+}
+.tourSearch .imgSearch {
+  border-radius: 10px 0px 0px 10px;
+  overflow: hidden;
+}
+.tourSearch .imgSearch img {
+  max-width: 100%;
+  width: 118px;
+  height: 180px;
+}
+.tourSearch .contentSearsh {
+  padding: 29px 14px 0px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0px 10px 10px 0px;
+  height: 180px;
+}
+.tourSearch .contentSearsh .titleCard {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.tourSearch .contentSearsh .durationcard {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.tourSearch .contentSearsh .daysCard {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.tourSearch .reateTour {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tourSearch .reateTour .contentReate span:nth-of-type(1) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #3d3d3d;
+}
+.tourSearch .reateTour .contentReate span:nth-of-type(2) {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3d3d3d;
+}
+.tourSearch .reateTour .reateNumber {
+  background: #f2b705;
+  border: 0.33729px solid #70735d;
+  border-radius: 0px 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.search .Travelers {
+  padding: 9px 10px;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 70px;
+}
+.search .buttonSearch 
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    width: 160px;
+    background: #70735d;
+    border-radius: 5px;
+    height: 70px;
+}
+.formRview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  background: #F5F5F5;
+  border-radius: 10px; 
+}
+.formRview .header {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #3D3D3D;
+}
+.rateText{
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+color: #3D3D3D;
+}
+.rateStar{
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px; 
+}
+/* rate star */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #FFE234;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* end rate star */
+.ReviewTitle{
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+color: #3D3D3D;
+
+}
+.recommend{
+    font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+color: #3D3D3D;
+}
+.formRview  .buttomSubmit{
+    background: #034C8C;
+    border-radius: 5px;
+    padding: 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin:  0 auto;
+    cursor: pointer;
+}
+.formRview  .buttomSubmit:hover{
+   transform: scale(0.9);
+}
+.formRview  .buttomSubmit button{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 786px) {
+  .infoTour ul li span {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 14px;
+    color: #ffffff;
+  }
+  .logoHeader span {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 70px;
+    color: #ffffff;
+  }
+  .tapsContainer {
+    justify-content: center;
+  }
+  .singileTap .tap {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .cardContainer {
+    justify-content: center;
+  }
+  .TopHotelsCard {
+    min-width: 45%;
+  }
+  .TopHotelsCard .hotleImage {
+    width: 285px;
+  }
+  .TopHotelsCard .hotleImage img {
+    width: 285px;
+    height: 156px;
+  }
+  .TopHotelsCard .contentTopTour {
+    width: 285px;
+    height: 156px;
+  }
+  .contentTopTour span:nth-of-type(1) {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #3d3d3d;
+  }
+  .contentTopTour span:nth-of-type(2) {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3d3d3d;
+  }
+  .hotleImage .reate {
+    font-size: 21px;
+  }
+  .hotleImage .content {
+    font-size: 21.1613px;
+    line-height: 25px;
+    bottom: 10px;
+  }
+  .reviews .avtarImg img {
+    max-width: 100%;
+    width: 98px;
+    height: 98px;
+    object-fit: cover;
+  }
+  .reviews .reviewContent .title span:nth-of-type(1) {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .reviews .reviewContent .title span:nth-of-type(2) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .reviews .reviewContent .commit {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .reviews .reviewContent .reateStar {
+    font-size: 20px;
+    color: #ffe234;
+  }
+  .splide__list {
+    gap: 80px !important;
+  }
+  .is-visible .reviewsSection {
+    padding: 38px 38px;
+  }
+  .headerInfo {
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 28px !important;
+  }
+  .video_container {
+    height: 309px;
+  }
+  .aboutSection .aboutContent span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: justify;
+  }
+  .aboutSection .viewMapBtn {
+    background: #ffffff;
+    border: 1.5px solid #034c8c;
+    border-radius: 20px;
+    width: 254px;
+    height: 68px;
+    cursor: pointer;
+    transition: all;
+  }
+  .aboutSection .viewMapBtn button {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .aboutSection .viewMapBtn button i {
+    font-size: 30px;
+    line-height: 48px;
+  }
+  .itineranyCard .headerItinerary {
+    font-family: "Karla";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #3d3d3d;
+  }
+  .itineranyCard .headerItinerary::before {
+    top: 2px;
+    left: -36px;
+    width: 24px;
+    height: 24px;
+  }
+  .imageItinerary img {
+    height: 334.54px;
+  }
+  .itineranyCard .descItinerary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .itineranyCard .buttonItinerary {
+    width: 223px;
+    height: 64px;
+  }
+  .itineranyCard .buttonItinerary button {
+    width: 172px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .itineranyCard .buttonItinerary button i {
+    font-size: 23px;
+    color: #3d3d3d;
+  }
+  .tourSearch .imgSearch img {
+    width: 235px;
+    height: 197px;  
+}
+.tourSearch .contentSearsh {
+  height: 197px; 
+  flex: 1;
+}
+.tourSearch .contentSearsh .titleCard {
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+color: #3D3D3D;
+}
+.tourSearch .contentSearsh .durationcard {
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+color: #3D3D3D;
+}
+.tourSearch .contentSearsh .daysCard {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+.cardBottom .buttonViewTour {
+  width: 152px;
+}
+.tourSearch .reateTour .contentReate span:nth-of-type(1) {
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+}
+.tourSearch .reateTour .contentReate span:nth-of-type(2) {
+font-size: 13px;
+line-height: 15px;
+}
+.tourSearch .reateTour .reateNumber {
+  width: 44px;
+  height: 39px;
+  font-size: 16px;
+}
+.search .dayBox {
+  width: 26% !important;
+}
+.formRview {
+  padding: 22px;
+}
+
+}
